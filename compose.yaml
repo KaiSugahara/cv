@@ -1,0 +1,10 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    tty: true
+    stdin_open: true

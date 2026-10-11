@@ -1,0 +1,6 @@
+{
+  "scm.defaultViewMode": "tree",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.tabSize": 2
+}

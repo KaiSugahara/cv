@@ -1,0 +1,30 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 48rem;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  line-height: 1.2;
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+  }
+
+  main {
+    margin: 0;
+    padding: 0;
+  }
+}

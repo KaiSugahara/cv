@@ -1,0 +1,6 @@
+.git
+.codex
+.env
+.env.*
+_site
+__pycache__
