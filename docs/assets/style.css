@@ -1,30 +1,77 @@
+/* Static CV adaptation of pages-themes/minimal (CC0-1.0).
+   https://github.com/pages-themes/minimal */
 :root {
-  color-scheme: light dark;
-  font-family: system-ui, sans-serif;
-  line-height: 1.6;
+  color-scheme: light;
+  font-family: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #545454;
+  background: #fff;
+  font-size: 15px;
+  line-height: 1.65;
 }
-
-body {
-  margin: 0;
+* { box-sizing: border-box; }
+body { margin: 0; padding: 64px 32px; }
+a { color: #267cb9; text-decoration: none; }
+a:hover { color: #006699; text-decoration: underline; }
+a:focus-visible { outline: 2px solid #267cb9; outline-offset: 4px; }
+h1, h2, h3 { color: #222; line-height: 1.3; }
+h1 { margin: 0 0 8px; font-size: 30px; letter-spacing: -.6px; }
+h2 { margin: 0 0 24px; font-size: 23px; }
+h3 { margin: 0 0 8px; font-size: 17px; }
+p { margin: 0 0 20px; }
+.wrapper { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 80px; align-items: start; }
+.profile { position: sticky; top: 48px; }
+.eyebrow { margin-bottom: 12px; color: #666; font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; }
+.native-name { color: #666; font-size: 16px; }
+.section-nav { display: flex; flex-wrap: wrap; gap: 18px; margin: 28px 0; padding: 18px 0; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; }
+.profile-heading { font-size: 18px; color: #222; margin-bottom: 16px; }
+.profile-group { margin-top: 18px; }
+.profile-group h3 { font-size: 13px; color: #494949; font-weight: 600; margin-bottom: 8px; }
+.profile-links { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; font-size: 14px; }
+.contact-image-frame { display: block; position: relative; width: 118px; height: 20px; overflow: hidden; }
+.contact-image { display: block; position: absolute; width: 132px; max-width: none; height: auto; left: -8px; top: -18px; }
+.theme-credit { font-size: 12px; color: #666; margin-top: 32px; }
+.theme-credit-mobile { display: none; }
+main { min-width: 0; }
+main > section { margin-bottom: 42px; scroll-margin-top: 24px; }
+main > section > h2 { padding-bottom: 12px; border-bottom: 1px solid #e5e5e5; }
+.education-entry, .experience-entry { margin-bottom: 24px; }
+.education-entry p:last-of-type, .experience-entry p:last-of-type { margin-bottom: 0; }
+.date { color: #666; font-size: 13px; margin-bottom: 4px; }
+.location { color: #666; font-size: 14px; }
+.publication-group { margin-top: 28px; }
+.publication-group h3 { color: #494949; margin-bottom: 16px; }
+.publications { padding-left: 22px; margin: 0; }
+.publications li { padding-left: 6px; margin-bottom: 22px; overflow-wrap: anywhere; }
+.publications li::marker { color: #777; font-size: 13px; }
+strong { color: #222; font-weight: 600; }
+.paper-link { display: inline-block; margin-left: 4px; font-size: 13px; }
+.award { display: block; color: #765816; font-size: 12px; margin-top: 6px; }
+.award a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.patent-note { margin-top: 28px; break-inside: avoid; }
+.patent-note p:last-child { margin-bottom: 0; }
+footer { border-top: 1px solid #e5e5e5; padding-top: 18px; display: flex; justify-content: space-between; gap: 16px; font-size: 12px; }
+.skip-link { position: absolute; top: 8px; left: 16px; padding: 8px 12px; background: #fff; transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+@media (max-width: 800px) {
+  body { padding: 36px 24px; }
+  .wrapper { grid-template-columns: 1fr; gap: 32px; max-width: 620px; }
+  .profile { position: static; }
+  .profile-links { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .theme-credit-desktop { display: none; }
+  .theme-credit-mobile { display: block; margin: 0; }
+  footer { flex-direction: column; }
 }
-
-main {
-  max-width: 48rem;
-  margin: 4rem auto;
-  padding: 0 1.5rem;
+@media (max-width: 420px) {
+  body { padding: 28px 20px; }
+  .profile-links { grid-template-columns: 1fr 1fr; }
 }
-
-h1 {
-  line-height: 1.2;
-}
-
 @media print {
-  :root {
-    color-scheme: light;
-  }
-
-  main {
-    margin: 0;
-    padding: 0;
-  }
+  body { padding: 0; font-size: 10pt; color: #333; }
+  .wrapper { display: block; max-width: none; }
+  .profile { position: static; margin-bottom: 24px; }
+  .section-nav, .theme-credit, .skip-link, footer { display: none; }
+  .profile-links { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+  .education-entry, .experience-entry, .publications li { break-inside: avoid; }
+  main > section { margin-bottom: 24px; }
+  a { color: #267cb9; }
 }
